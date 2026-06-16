@@ -1828,3 +1828,15 @@
 .has-video.playing svg > *:nth-child(17) { animation-delay: 6.50s; }
 .has-video.playing svg > *:nth-child(18) { animation-delay: 6.90s; }
 @media (prefers-reduced-motion: reduce) { .has-video.playing svg > * { animation: none; } }
+
+/* ---- Extreme Ownership nav highlight (black + red, far right) ---- */
+.nav-links a.ownership-link {
+  margin-left: 10px;
+  background: #15171c;
+  color: #ef3b2f;
+  border: 1px solid #ef3b2f;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+.nav-links a.ownership-link:hover { background: #000000; color: #ff5a4d; }
+.nav-links a.ownership-link.active { background: #ef3b2f; color: #ffffff; border-color: #ef3b2f; }
