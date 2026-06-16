@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html" class="active">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="agenda">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Mini onboarding agenda</h2>
+          <p class="lede">Use this flow for your first session. It starts with familiar chat examples, then shows how Claude can become a more active work partner for documents, files, and technical martech tasks.</p>
+        </div>
+        <div class="agenda">
+          <aside class="card">
+            <span class="tag blue">Facilitator note</span>
+            <p>Position yourself as the initial lead: you will test use cases, collect useful prompts, identify what is safe for team use, and help people choose the right Claude surface.</p>
+          </aside>
+          <div class="timeline">
+            <article class="card timebox"><div class="time">0-5</div><div><h3>Context</h3><p>Why access was granted, what problems we are trying to solve, and what “good use” looks like.</p></div></article>
+            <article class="card timebox"><div class="time">5-15</div><div><h3>Chat basics</h3><p>Show chat, file upload, iterative prompting, and how to ask for a specific output format.</p></div></article>
+            <article class="card timebox"><div class="time">15-30</div><div><h3>Three starter demos</h3><p>Create a presentation outline, summarize research, and draft a campaign document from raw notes.</p></div></article>
+            <article class="card timebox"><div class="time">30-40</div><div><h3>Superpower prompts</h3><p>Teach role, goal, context, constraints, output format, artifacts, citations, and critique prompts.</p></div></article>
+            <article class="card timebox"><div class="time">40-52</div><div><h3>Cowork and Code preview</h3><p>Explain when to use chat, Cowork, and Claude Code, then show a practical martech example for each.</p></div></article>
+            <article class="card timebox"><div class="time">52-60</div><div><h3>Team next steps</h3><p>Ask each person to pick one low-risk workflow to try this week and share one useful prompt back.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Go from easy to advanced</h2>
+          <p class="lede">The team does not need to become AI experts on day one. Give them a ladder: use Claude for thinking first, then for reusable outputs, then for agent-style workflows when the work has many moving parts.</p>
+        </div>
+        <div class="pathway">
+          <article class="card path-card">
+            <span class="tag">Easy</span>
+            <h3>Ask and refine</h3>
+            <p>Use chat to draft, summarize, rewrite, brainstorm, and compare options. Keep the task small and give Claude a clear format.</p>
+          </article>
+          <article class="card path-card">
+            <span class="tag coral">Repeatable</span>
+            <h3>Create artifacts</h3>
+            <p>Ask Claude to create a reusable guide, checklist, template, table, or simple interactive artifact that the team can keep editing.</p>
+          </article>
+          <article class="card path-card">
+            <span class="tag gold">Agent-style</span>
+            <h3>Assign helper roles</h3>
+            <p>Ask Claude to act as researcher, strategist, editor, QA reviewer, or analytics translator, then combine the outputs into one recommendation.</p>
+          </article>
+          <article class="card path-card">
+            <span class="tag blue">Advanced</span>
+            <h3>Use Cowork or Code</h3>
+            <p>Move to Cowork or Claude Code when Claude needs to work across files, inspect a folder, update assets, run checks, or coordinate subagents.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Starter use cases for marketing</h2>
+          <p class="lede">Start with familiar work where Claude can help shape, summarize, rewrite, compare, and format. Avoid making the first session feel like a technical implementation workshop.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Marketing use cases">
+          <button class="tab" role="tab" aria-selected="true" data-tab="presentations">Presentations</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="research">Research</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="documents">Documents</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="experiments">Campaign thinking</button>
+        </div>
+        <div class="panel active" id="presentations" role="tabpanel">
+          <div class="grid">
+            <article class="card"><span class="tag">Deck structure</span><h3>Turn messy notes into a story</h3><p>Claude can create an executive narrative, recommended slide order, titles, speaker notes, and missing-data questions.</p></article>
+            <article class="card"><span class="tag coral">Audience fit</span><h3>Make it right for the room</h3><p>Ask for versions for leadership, campaign owners, agencies, or technical stakeholders.</p></article>
+            <article class="card"><span class="tag gold">Slide polish</span><h3>Rewrite slide headlines</h3><p>Give Claude the slide titles and ask for sharper takeaway headlines, simpler bullets, and a cleaner close.</p></article>
+          </div>
+        </div>
+        <div class="panel" id="research" role="tabpanel">
+          <div class="grid">
+            <article class="card"><span class="tag">Synthesis</span><h3>Summarize sources</h3><p>Paste notes or attach files, then ask for themes, contradictions, source caveats, and implications for the campaign.</p></article>
+            <article class="card"><span class="tag coral">Competitive view</span><h3>Compare messaging</h3><p>Use Claude to compare competitor positioning, offers, channels, and gaps that your team could exploit.</p></article>
+            <article class="card"><span class="tag gold">Research plan</span><h3>Ask better questions</h3><p>Claude can draft interview questions, survey angles, desk research plans, and decision criteria.</p></article>
+          </div>
+        </div>
+        <div class="panel" id="documents" role="tabpanel">
+          <div class="grid">
+            <article class="card"><span class="tag">Briefs</span><h3>Build campaign briefs</h3><p>Transform intake notes into audience, objective, offer, message, channels, timeline, and approval sections.</p></article>
+            <article class="card"><span class="tag coral">QA</span><h3>Create review checklists</h3><p>Ask Claude to create launch QA, UTM, landing-page, email, and stakeholder-review checklists.</p></article>
+            <article class="card"><span class="tag gold">Reuse</span><h3>Standardize templates</h3><p>Turn one good example into a reusable template with placeholders and guidance for future requests.</p></article>
+          </div>
+        </div>
+        <div class="panel" id="experiments" role="tabpanel">
+          <div class="grid">
+            <article class="card"><span class="tag">Hypotheses</span><h3>Clarify test ideas</h3><p>Claude can turn “let’s test this” into a hypothesis, audience, metric, sample risk, and readout format.</p></article>
+            <article class="card"><span class="tag coral">Segmentation</span><h3>Map audience angles</h3><p>Ask for segments, pains, proof points, objections, and messaging hooks by funnel stage.</p></article>
+            <article class="card"><span class="tag gold">Post-mortems</span><h3>Extract learnings</h3><p>Give Claude performance notes and ask for what happened, likely reasons, next tests, and stakeholder summary.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

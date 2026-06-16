@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q&A board · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html" class="active">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="board">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collaborative Q&A board</h2>
+          <p class="lede">Use this during onboarding so team members can register, submit questions, and let you respond as the admin. This version stores entries locally in the browser for the session; use an approved form, sheet, or internal ticket tool if you need shared multi-user persistence.</p>
+        </div>
+        <div class="board">
+          <aside class="card">
+            <span class="tag">Register</span>
+            <div class="form-stack">
+              <label for="member-name">Your name</label>
+              <input id="member-name" type="text" placeholder="Name">
+              <label for="member-role">Role or team</label>
+              <input id="member-role" type="text" placeholder="Lifecycle, analytics, ops, content...">
+              <button class="btn" id="save-member" type="button">Register</button>
+            </div>
+            <p class="board-note" id="member-status">Register first, then add a question for the admin.</p>
+            <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+            <span class="tag coral">Ask the admin</span>
+            <div class="form-stack">
+              <label for="question-topic">Topic</label>
+              <select id="question-topic">
+                <option>Getting started</option>
+                <option>Prompting</option>
+                <option>Guardrails</option>
+                <option>Claude Chat</option>
+                <option>Cowork</option>
+                <option>Claude Code</option>
+                <option>Agents and helpers</option>
+                <option>Team process</option>
+              </select>
+              <label for="question-text">Question</label>
+              <textarea id="question-text" placeholder="What do you want to ask after the onboarding?"></textarea>
+              <button class="btn" id="submit-question" type="button">Submit question</button>
+            </div>
+          </aside>
+          <div class="card">
+            <div class="section-head" style="grid-template-columns:1fr auto;margin-bottom:16px">
+              <div>
+                <span class="tag gold">Live board</span>
+                <h3 style="margin:0">Questions for the admin</h3>
+              </div>
+              <div class="hero-actions" style="margin-top:0">
+                <button class="btn small secondary" id="toggle-admin" type="button">Admin mode</button>
+                <button class="btn small" id="export-board" type="button">Export CSV</button>
+              </div>
+            </div>
+            <div class="question-list" id="question-list" aria-live="polite"></div>
+            <p class="board-note">Admin passcode for this prototype: <strong>lead</strong>. Change it in the HTML before sharing broadly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

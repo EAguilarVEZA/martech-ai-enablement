@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompts and best practices · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html" class="active">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="prompts">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Prompt library</h2>
+          <p class="lede">Good prompts are clear about the role, goal, context, constraints, and output format. These are intentionally simple so the team can adapt them quickly.</p>
+        </div>
+        <div class="grid two">
+          <article class="card prompt">
+            <div>
+              <span class="tag">Presentation</span>
+              <h3>Campaign update deck</h3>
+            </div>
+            <pre data-copy>Act as a senior marketing strategist. I need a 10-slide campaign update deck for [audience].
+
+Context:
+- Campaign goal: [goal]
+- Audience: [audience]
+- Current results: [metrics or notes]
+- Issues or open questions: [notes]
+
+Create:
+1. Slide-by-slide outline
+2. Strong takeaway headline for each slide
+3. Suggested chart or visual
+4. Speaker note for each slide
+5. Questions I should answer before presenting</pre>
+            <footer><span>Use when you have notes but no story yet.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag coral">Research</span>
+              <h3>Research synthesis</h3>
+            </div>
+            <pre data-copy>Act as a research analyst for a martech team. Summarize the notes below for a busy marketing leader.
+
+Source notes:
+[paste notes, links, transcript, or uploaded file summary]
+
+Return:
+- 5 key findings
+- Why each finding matters
+- Risks, caveats, or weak evidence
+- Recommended next questions
+- A short executive summary under 150 words</pre>
+            <footer><span>Use after desk research, calls, or stakeholder notes.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag gold">Document</span>
+              <h3>Campaign brief</h3>
+            </div>
+            <pre data-copy>Turn these rough notes into a campaign brief.
+
+Use this structure:
+- Objective
+- Target audience
+- Audience problem or insight
+- Core message
+- Offer
+- Channels
+- Required assets
+- Timeline
+- Owners
+- Risks and dependencies
+- Approval checklist
+
+Ask clarifying questions first if anything important is missing.
+
+Notes:
+[paste notes]</pre>
+            <footer><span>Use for intake, launches, and cross-functional handoffs.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag blue">Iteration</span>
+              <h3>Improve the output</h3>
+            </div>
+            <pre data-copy>Improve the draft below.
+
+Make it:
+- Clearer for [audience]
+- More concise
+- More specific about business impact
+- Easier to scan
+
+Keep:
+- The core facts
+- The intended tone
+- Any claims that are supported by evidence
+
+Also list the top 3 changes you made and why.
+
+Draft:
+[paste draft]</pre>
+            <footer><span>Use after Claude or a teammate creates a first draft.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag">Artifact</span>
+              <h3>Create a reusable asset</h3>
+            </div>
+            <pre data-copy>Create an artifact I can reuse with the team.
+
+Artifact type:
+[checklist, one-page guide, simple webpage, table, launch tracker, campaign template]
+
+Audience:
+[team or stakeholder]
+
+Content to include:
+[paste notes]
+
+Make it:
+- Easy to scan
+- Practical for daily use
+- Organized into clear sections
+- Ready for us to edit and improve later</pre>
+            <footer><span>Use when the output should become a team reference.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag coral">Interview</span>
+              <h3>Let Claude ask you questions</h3>
+            </div>
+            <pre data-copy>I want to create [campaign, brief, presentation, workflow, report].
+
+Interview me first. Ask one question at a time.
+Focus on:
+- Business goal
+- Audience
+- Message
+- Evidence
+- Constraints
+- Approvals
+- Timeline
+- Risks
+
+When you have enough information, create the first draft in this format:
+[format]</pre>
+            <footer><span>Use when you know the goal but not all details yet.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag gold">Cowork</span>
+              <h3>Folder-based campaign review</h3>
+            </div>
+            <pre data-copy>Review the files in this campaign workspace.
+
+Goal:
+Create a launch readiness summary for [campaign name].
+
+Look for:
+- Missing assets
+- Inconsistent messaging
+- Unclear owners
+- Tracking or UTM gaps
+- Approval risks
+- Questions we need to answer before launch
+
+Create:
+1. Executive summary
+2. Readiness checklist
+3. Risk table with owner and priority
+4. Recommended next actions
+
+Do not modify files unless I ask you to.</pre>
+            <footer><span>Use in Cowork when Claude can access a selected folder.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag blue">Code</span>
+              <h3>Technical martech task</h3>
+            </div>
+            <pre data-copy>Explore first, then plan before making changes.
+
+Task:
+[describe the website, tracking, dashboard, CSV, or automation issue]
+
+Please:
+1. Inspect the relevant files and explain how the current setup works.
+2. Identify risks or missing context.
+3. Propose a plan.
+4. Wait for my approval before editing.
+5. After approval, implement and run the most relevant checks.
+6. Summarize what changed and show evidence that it works.</pre>
+            <footer><span>Use in Claude Code for scripts, sites, analytics, or repo changes.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demos">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Live demo examples</h2>
+          <p class="lede">Use these examples during the onboarding. They are simple enough to show quickly, but each one demonstrates a deeper Claude habit: context, iteration, verification, and choosing the right surface.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Demo 1: Chat</span>
+            <h3>From messy notes to deck outline</h3>
+            <div class="demo-list">
+              <div class="demo-step"><b>1</b><p>Paste rough campaign notes and ask for a 10-slide outline.</p></div>
+              <div class="demo-step"><b>2</b><p>Ask Claude to rewrite slide titles as executive takeaway headlines.</p></div>
+              <div class="demo-step"><b>3</b><p>Ask: “What data would make this stronger?”</p></div>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tag coral">Demo 2: Artifact</span>
+            <h3>Create a launch checklist</h3>
+            <div class="demo-list">
+              <div class="demo-step"><b>1</b><p>Ask Claude to create an artifact for a lifecycle campaign launch checklist.</p></div>
+              <div class="demo-step"><b>2</b><p>Have it group tasks by owner: content, ops, analytics, design, approvals.</p></div>
+              <div class="demo-step"><b>3</b><p>Ask for a risk column and a “ready/not ready” status.</p></div>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tag gold">Demo 3: Cowork</span>
+            <h3>Review a campaign folder</h3>
+            <div class="demo-list">
+              <div class="demo-step"><b>1</b><p>Select a folder with sample brief, email draft, landing page notes, and QA list.</p></div>
+              <div class="demo-step"><b>2</b><p>Ask for a readiness summary and missing-item report.</p></div>
+              <div class="demo-step"><b>3</b><p>Ask Claude to create a final stakeholder readout, without changing source files.</p></div>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tag blue">Demo 4: Code</span>
+            <h3>Audit a landing page or script</h3>
+            <div class="demo-list">
+              <div class="demo-step"><b>1</b><p>Ask Claude Code to inspect the landing page or CSV cleanup script.</p></div>
+              <div class="demo-step"><b>2</b><p>Require a plan before edits and ask for the verification command.</p></div>
+              <div class="demo-step"><b>3</b><p>Approve the change, then have Claude run checks and summarize evidence.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="selector">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What should I ask Claude?</h2>
+          <p class="lede">Pick the task and copy the recommended starting move. This helps new users choose a productive prompt instead of typing a vague request.</p>
+        </div>
+        <div class="selector">
+          <div class="card chooser">
+            <label for="task">I am trying to...</label>
+            <select id="task">
+              <option value="outline">Create a presentation outline</option>
+              <option value="summarize">Summarize research or notes</option>
+              <option value="brief">Draft a campaign brief</option>
+              <option value="rewrite">Rewrite copy for an audience</option>
+              <option value="qa">Build a launch checklist</option>
+              <option value="artifact">Create a reusable artifact</option>
+              <option value="cowork">Review a campaign folder</option>
+              <option value="code">Handle a technical martech task</option>
+            </select>
+          </div>
+          <article class="card result">
+            <span class="tag coral">Recommended prompt move</span>
+            <h3 id="result-title">Create a presentation outline</h3>
+            <p id="result-copy">Give Claude the audience, goal, raw notes, and desired number of slides. Ask for slide titles, takeaway headlines, visuals, and missing questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="keywords">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Special words that power up Claude</h2>
+          <p class="lede">These phrases tell Claude what kind of work to do: ask, structure, critique, verify, create, delegate, or preserve context. Teach the team to use them intentionally.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">Ask first</span><h3>“Ask clarifying questions first.”</h3><p>Use when the request is incomplete and you want Claude to identify gaps before drafting.</p></article>
+          <article class="card"><span class="tag coral">Shape</span><h3>“Return this as a table.”</h3><p>Use for comparisons, content calendars, test plans, persona maps, and launch checklists.</p></article>
+          <article class="card"><span class="tag gold">Critique</span><h3>“Pressure-test this recommendation.”</h3><p>Use when you want risks, missing evidence, counterarguments, and stronger decision logic.</p></article>
+          <article class="card"><span class="tag blue">Reusable</span><h3>“Turn this into a template.”</h3><p>Use after a good output so the team can repeat the workflow with new campaign inputs.</p></article>
+          <article class="card"><span class="tag">Artifact</span><h3>“Create an artifact.”</h3><p>Use when you want a standalone document, single-page guide, simple app, visualization, or content you will keep editing.</p></article>
+          <article class="card"><span class="tag coral">Citations</span><h3>“Cite sources and flag uncertainty.”</h3><p>Use for research tasks, especially when web search or uploaded sources are part of the workflow.</p></article>
+          <article class="card"><span class="tag gold">Interview</span><h3>“Interview me first.”</h3><p>Use when the goal is fuzzy. Claude can ask better intake questions before creating the output.</p></article>
+          <article class="card"><span class="tag blue">Evidence</span><h3>“Show your reasoning as assumptions and evidence.”</h3><p>Use for recommendations. Ask Claude to separate facts, assumptions, and judgment calls.</p></article>
+          <article class="card"><span class="tag">Verify</span><h3>“Give yourself a check you can run.”</h3><p>Use in Code or Cowork-style work. Ask Claude how it will prove the task is done.</p></article>
+          <article class="card"><span class="tag coral">Delegate</span><h3>“Use subagents to investigate.”</h3><p>Use in Claude Code when research would clutter the main conversation or requires separate expert lenses.</p></article>
+          <article class="card"><span class="tag gold">Plan mode</span><h3>“Explore first, then make a plan.”</h3><p>Use before technical or multi-file work. Claude should understand the system before changing it.</p></article>
+          <article class="card"><span class="tag blue">Context reset</span><h3>“Start fresh with this summary.”</h3><p>Use when a thread has drifted. Give Claude the clean goal, decisions, constraints, and next step.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="best-practices">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Best practices for the team</h2>
+          <p class="lede">The quality of Claude’s work depends on the quality of the task definition, context, and feedback loop. These habits help the team get better results with fewer corrections.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Context</span>
+            <h3>Give the real situation</h3>
+            <p>Include audience, business goal, channel, timeline, constraints, source material, and what “good” looks like.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Format</span>
+            <h3>Specify the output</h3>
+            <p>Ask for a table, memo, slide outline, checklist, JSON, artifact, email, QA rubric, or executive summary.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Iterate</span>
+            <h3>Treat the first answer as draft one</h3>
+            <p>Ask Claude to shorten, sharpen, adapt to a persona, add missing risks, or create a second version with a different angle.</p>
+          </article>
+          <article class="card">
+            <span class="tag blue">Verify</span>
+            <h3>Ask for evidence</h3>
+            <p>For research, ask for citations and uncertainty. For Code, ask for tests, screenshots, or command output. For Cowork, ask what files were reviewed.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Protect context</span>
+            <h3>Split big work</h3>
+            <p>Use one thread for research, one for drafting, and one for final polishing. In Code, use subagents for investigation.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Human review</span>
+            <h3>Keep judgment with the team</h3>
+            <p>Claude can accelerate the work, but the team owns accuracy, brand fit, legal review, stakeholder alignment, and final decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Challenge · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html" class="active">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="challenge">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>OH MarTech AI Challenge</h2>
+          <p class="lede">Turn the learning program into a fun innovation sprint for Orlando Health martech. Anyone can register, join a track, submit an idea, and collaborate on a practical AI-enabled improvement that helps the team work smarter.</p>
+        </div>
+        <div class="grid four" style="margin-bottom:16px">
+          <article class="card">
+            <span class="tag">Purpose</span>
+            <h3>Learn by building</h3>
+            <p>Use AI on a small, useful martech problem instead of only watching demos.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Format</span>
+            <h3>2-week sprint</h3>
+            <p>Form small cross-functional teams, prototype, share lessons, and recommend next steps.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Output</span>
+            <h3>Working concept</h3>
+            <p>Submit a prompt, artifact, workflow, dashboard, content system, or lightweight technical prototype.</p>
+          </article>
+          <article class="card">
+            <span class="tag blue">Recognition</span>
+            <h3>Showcase day</h3>
+            <p>Celebrate practical ideas, responsible AI use, and collaboration across skill levels.</p>
+          </article>
+        </div>
+        <div class="challenge-stage">
+          <aside class="card">
+            <span class="tag">Step 1 · Sign up</span>
+            <h3 style="margin:8px 0 4px">Join the challenge</h3>
+            <div class="form-stack">
+              <label for="ch-name">Name</label>
+              <input id="ch-name" type="text" placeholder="Your name">
+              <label for="ch-role">Role or skill</label>
+              <input id="ch-role" type="text" placeholder="Web, content, analytics, ops, technical...">
+              <label for="ch-avail">How much time can you give?</label>
+              <select id="ch-avail">
+                <option>A few hours this sprint</option>
+                <option>About half a day</option>
+                <option>One to two days</option>
+                <option>All-in</option>
+              </select>
+              <label for="ch-track">Choose a track</label>
+              <select id="ch-track">
+                <option value="web">Website &amp; digital experience</option>
+                <option value="content">Content &amp; campaign strategy</option>
+                <option value="analytics">Analytics &amp; insights</option>
+                <option value="ops">Operations &amp; automation</option>
+                <option value="tech">Technical innovation</option>
+              </select>
+              <button class="btn" id="ch-join" type="button">Join &amp; get my tasks</button>
+            </div>
+            <p class="board-note">Use approved, non-sensitive examples only. Your sign-up and progress save in your browser.</p>
+          </aside>
+          <div class="card">
+            <span class="tag gold">Step 2 · Your assignment</span>
+            <div id="ch-assignment">
+              <p class="board-note" style="margin-top:12px">Sign up on the left and you'll get your track and a five-step task checklist to make your challenge real.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-head" style="grid-template-columns:1fr auto;margin-bottom:14px">
+            <div>
+              <span class="tag blue">Step 3 · Progress board</span>
+              <h3 style="margin:0">Who's in and how far they've got</h3>
+            </div>
+            <button class="btn small secondary" id="ch-export" type="button">Export CSV</button>
+          </div>
+          <div class="challenge-board" id="ch-board" aria-live="polite"></div>
+        </div>
+
+        <div class="challenge-rules">
+          <article class="card">
+            <span class="tag">Track 1</span>
+            <h3>Website and digital experience</h3>
+            <p>Examples: landing page QA assistant, accessibility checklist, SEO brief generator, content-to-page outline workflow.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Track 2</span>
+            <h3>Content and campaign strategy</h3>
+            <p>Examples: campaign narrative builder, audience message matrix, service-line content repurposing workflow.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Track 3</span>
+            <h3>Analytics and insights</h3>
+            <p>Examples: weekly performance summary, experiment readout template, anomaly explanation assistant.</p>
+          </article>
+          <article class="card">
+            <span class="tag blue">Track 4</span>
+            <h3>Operations and automation</h3>
+            <p>Examples: launch readiness board, UTM QA checklist, intake triage helper, approval handoff tracker.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Track 5</span>
+            <h3>Technical innovation</h3>
+            <p>Examples: CSV cleanup script, tracking audit helper, prototype app, prompt library search, lightweight dashboard.</p>
+          </article>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <article class="card">
+            <span class="tag coral">Judging criteria</span>
+            <h3>How ideas are selected</h3>
+            <ul>
+              <li>Useful for Orlando Health martech work</li>
+              <li>Safe and responsible with data</li>
+              <li>Clear owner, workflow, and adoption path</li>
+              <li>Cross-functional collaboration</li>
+              <li>Evidence that the prototype improves speed, quality, or consistency</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag gold">Challenge rhythm</span>
+            <h3>Suggested sprint flow</h3>
+            <ul>
+              <li>Day 1: kickoff, tracks, guardrails, team formation</li>
+              <li>Days 2-5: problem framing, examples, prompt/prototype work</li>
+              <li>Days 6-8: test with real but safe scenarios</li>
+              <li>Day 9: polish the story and evidence</li>
+              <li>Day 10: showcase, feedback, and next-step decision</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag blue">Team mix</span>
+            <h3>Who should join</h3>
+            <ul>
+              <li>Website and digital experience teammates</li>
+              <li>Content, campaign, and brand writers</li>
+              <li>Analytics, insights, and reporting partners</li>
+              <li>Marketing operations and automation owners</li>
+              <li>Technical innovators who can prototype safely</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

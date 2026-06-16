@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html" class="active">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="surfaces">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Chat, Cowork, and Code</h2>
+          <p class="lede">Choose the surface based on the kind of work. Use regular Claude chat for thinking and content. Use Cowork-style file work when Claude needs to operate across a selected workspace. Use Claude Code for technical tasks that involve repositories, scripts, tests, or implementation.</p>
+        </div>
+        <table class="matrix" aria-label="Claude surface comparison">
+          <thead>
+            <tr>
+              <th>Surface</th>
+              <th>Best for</th>
+              <th>Martech example</th>
+              <th>Prompt style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Claude Chat</strong></td>
+              <td>Fast thinking, drafting, summarizing, research synthesis, content variants, and artifacts.</td>
+              <td>Create a campaign brief from notes, turn research into a POV, rewrite copy for three audience segments.</td>
+              <td>Give role, context, constraints, output format, and ask for clarifying questions before drafting.</td>
+            </tr>
+            <tr>
+              <td><strong>Cowork</strong></td>
+              <td>Multi-step file work in a selected folder or connected workspace, especially for non-technical users.</td>
+              <td>Review a folder of campaign docs, create a launch checklist, organize drafts, compare assets, and produce a final readout.</td>
+              <td>Give a folder goal, allowed files, desired output, and verification steps. Ask Claude to show what it changed.</td>
+            </tr>
+            <tr>
+              <td><strong>Claude Code</strong></td>
+              <td>Technical martech work: websites, scripts, tracking QA, data transforms, dashboards, repo changes, tests, and PRs.</td>
+              <td>Audit landing-page tracking, create a simple HTML guide, fix a form validation issue, write a script to clean campaign CSVs.</td>
+              <td>Ask Claude to explore first, make a plan, implement, run checks, and summarize evidence.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="grid three" style="margin-top:16px">
+          <article class="card">
+            <span class="tag">Rule of thumb</span>
+            <h3>Chat answers and drafts</h3>
+            <p>When the output is a recommendation, memo, outline, summary, or reusable artifact, start in chat.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Rule of thumb</span>
+            <h3>Cowork handles folders</h3>
+            <p>When the work is “look through these files and create/update deliverables,” use Cowork if your workspace has it enabled.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Rule of thumb</span>
+            <h3>Code changes systems</h3>
+            <p>When the work touches code, data scripts, QA automation, tests, or a website/app, use Claude Code.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="agents">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Agents and team helpers</h2>
+          <p class="lede">An “agent” is best explained as a specialized helper with a job, context, tools, and a success check. The team can start with simple role prompts in chat, then later use subagents or agent teams in Claude Code for larger work.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Beginner</span>
+            <h3>Role-based helper</h3>
+            <p>Tell Claude: “Act as a lifecycle marketing strategist” or “Act as a landing page QA reviewer.” This gives Claude a lens for the answer.</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Intermediate</span>
+            <h3>Panel of helpers</h3>
+            <p>Ask Claude to answer from multiple roles: strategist, analyst, copywriter, and operations lead. Then ask it to reconcile the best recommendation.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Advanced</span>
+            <h3>Subagents and teams</h3>
+            <p>In Claude Code, subagents can investigate in separate context windows, while agent teams can coordinate larger projects when enabled.</p>
+          </article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card prompt">
+            <div>
+              <span class="tag blue">Agent-style chat</span>
+              <h3>Create a marketing helper team</h3>
+            </div>
+            <pre data-copy>For this task, act like a small marketing working team with four roles:
+1. Strategist: clarify the business goal and audience.
+2. Researcher: identify evidence, assumptions, and gaps.
+3. Copy lead: improve message clarity and tone.
+4. Martech ops lead: check feasibility, tracking, handoff, and launch risks.
+
+Task:
+[describe the campaign, launch, or asset]
+
+First, give each role's assessment separately. Then combine them into one recommended plan with next steps, risks, and open questions.</pre>
+            <footer><span>Use this before a review meeting or campaign kickoff.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+          <article class="card prompt">
+            <div>
+              <span class="tag gold">Claude Code</span>
+              <h3>Use subagents for investigation</h3>
+            </div>
+            <pre data-copy>Use subagents to investigate this martech implementation before making changes.
+
+Goal:
+[describe the issue or improvement]
+
+Have one subagent inspect tracking and analytics implications, one inspect frontend/user experience implications, and one inspect data or integration risks.
+
+Return:
+- Findings by subagent
+- Recommended implementation plan
+- Files or systems likely involved
+- Verification steps
+
+Do not edit anything until I approve the plan.</pre>
+            <footer><span>Use when a technical task needs research before action.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

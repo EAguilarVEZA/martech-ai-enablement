@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardrails · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="ownership.html">Ownership</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html" class="active">Guardrails</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="guardrails">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Team guardrails</h2>
+          <p class="lede">The team should use Claude as a collaborator, not an autopilot. These guardrails give people confidence about what to try, what to verify, when to escalate, and what not to share.</p>
+        </div>
+        <div class="do-dont">
+          <article class="card">
+            <span class="tag">Do</span>
+            <ul>
+              <li>Use Claude for drafts, structure, synthesis, alternatives, and QA checks.</li>
+              <li>Include audience, goal, context, constraints, and format in the prompt.</li>
+              <li>Verify facts, data, claims, and source quality before sharing externally.</li>
+              <li>Save useful prompts and examples so the team builds a shared library.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag coral">Avoid</span>
+            <ul>
+              <li>Do not paste confidential, regulated, customer, or sensitive data unless your company policy allows it.</li>
+              <li>Do not publish Claude output without human review and brand/legal checks.</li>
+              <li>Do not ask for “make it better” without saying better for whom and why.</li>
+              <li>Do not treat a polished answer as a verified answer.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <article class="card">
+            <span class="tag">Data</span>
+            <h3>Protect sensitive information</h3>
+            <ul>
+              <li>Use anonymized or synthetic examples when practicing.</li>
+              <li>Remove customer names, emails, account IDs, contract details, and personal data unless policy explicitly allows it.</li>
+              <li>Do not paste secrets, API keys, credentials, private URLs, unpublished financials, or restricted partner data.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag coral">Accuracy</span>
+            <h3>Verify before sharing</h3>
+            <ul>
+              <li>Check facts, dates, benchmarks, pricing, claims, and source quality.</li>
+              <li>Ask Claude to separate facts, assumptions, and recommendations.</li>
+              <li>For external content, require human brand, legal, and stakeholder review.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag gold">Brand</span>
+            <h3>Keep voice and claims aligned</h3>
+            <ul>
+              <li>Provide approved messaging, audience, tone, and forbidden claims.</li>
+              <li>Ask Claude to flag claims that need evidence or approval.</li>
+              <li>Do not let Claude invent customer quotes, performance metrics, or product capabilities.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag blue">Research</span>
+            <h3>Demand traceability</h3>
+            <ul>
+              <li>Ask for sources, caveats, and confidence level.</li>
+              <li>Do not mix sourced facts with Claude’s guesses.</li>
+              <li>Use research summaries as decision support, not final truth.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Automation</span>
+            <h3>Keep humans in the loop</h3>
+            <ul>
+              <li>Review outputs before sending, publishing, uploading, or changing systems.</li>
+              <li>For Cowork and Code, ask Claude to show what files it read or changed.</li>
+              <li>Use approval checkpoints before any action with business impact.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag coral">Technical work</span>
+            <h3>Plan, test, and preserve</h3>
+            <ul>
+              <li>Ask Claude Code to explore first and wait for approval before edits.</li>
+              <li>Require checks: tests, lint, screenshots, tracking validation, or sample output.</li>
+              <li>Do not allow broad destructive actions without clear scope and backup.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag gold">Collaboration</span>
+            <h3>Make learning visible</h3>
+            <ul>
+              <li>Share useful prompts, failed prompts, and before/after examples.</li>
+              <li>Create a common prompt library for repeatable martech workflows.</li>
+              <li>Capture unresolved questions in the Q&A board and answer them after the session.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag blue">Escalation</span>
+            <h3>Know when to stop</h3>
+            <ul>
+              <li>Escalate if the request involves legal, security, procurement, regulated data, or customer-impacting decisions.</li>
+              <li>Pause if Claude contradicts known facts or cannot cite sources.</li>
+              <li>Ask an owner to approve before changing templates, tracking, automations, or live content.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Red flags</span>
+            <h3>Watch for risky patterns</h3>
+            <ul>
+              <li>“Just send it as-is.”</li>
+              <li>“Use this customer data; it is probably fine.”</li>
+              <li>“Make up a benchmark.”</li>
+              <li>“Change the live workflow without telling anyone.”</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>
