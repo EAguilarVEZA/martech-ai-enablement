@@ -34,6 +34,11 @@ const siteNav = document.querySelector(".site-nav");
       }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
 
       revealTargets.forEach((item) => revealObserver.observe(item));
+      requestAnimationFrame(() => {
+        revealTargets.forEach((item) => {
+          if (item.getBoundingClientRect().top < window.innerHeight * 0.95) item.classList.add("visible");
+        });
+      });
     }
 
     function alignHashTarget() {

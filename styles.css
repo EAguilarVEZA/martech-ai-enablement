@@ -1799,3 +1799,32 @@
   
     /* multi-page nav active state */
     .nav-links a.active { background: #edf5f2; color: var(--teal-dark); }
+
+/* ---- Concept movies: animated build-in on play ---- */
+@keyframes mvFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes mvPopIn { from { opacity: 0; transform: scale(0.65); } to { opacity: 1; transform: scale(1); } }
+@keyframes mvRiseIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes mvDriftIn { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: translateX(0); } }
+.has-video.playing svg > * { animation: mvFadeIn 0.6s both; transform-box: fill-box; transform-origin: 50% 50%; }
+.has-video.playing svg > *:nth-child(4n+2) { animation-name: mvPopIn; }
+.has-video.playing svg > *:nth-child(4n+3) { animation-name: mvRiseIn; }
+.has-video.playing svg > *:nth-child(4n) { animation-name: mvDriftIn; }
+.has-video.playing svg > *:nth-child(1) { animation-delay: 0.10s; }
+.has-video.playing svg > *:nth-child(2) { animation-delay: 0.50s; }
+.has-video.playing svg > *:nth-child(3) { animation-delay: 0.90s; }
+.has-video.playing svg > *:nth-child(4) { animation-delay: 1.30s; }
+.has-video.playing svg > *:nth-child(5) { animation-delay: 1.70s; }
+.has-video.playing svg > *:nth-child(6) { animation-delay: 2.10s; }
+.has-video.playing svg > *:nth-child(7) { animation-delay: 2.50s; }
+.has-video.playing svg > *:nth-child(8) { animation-delay: 2.90s; }
+.has-video.playing svg > *:nth-child(9) { animation-delay: 3.30s; }
+.has-video.playing svg > *:nth-child(10) { animation-delay: 3.70s; }
+.has-video.playing svg > *:nth-child(11) { animation-delay: 4.10s; }
+.has-video.playing svg > *:nth-child(12) { animation-delay: 4.50s; }
+.has-video.playing svg > *:nth-child(13) { animation-delay: 4.90s; }
+.has-video.playing svg > *:nth-child(14) { animation-delay: 5.30s; }
+.has-video.playing svg > *:nth-child(15) { animation-delay: 5.70s; }
+.has-video.playing svg > *:nth-child(16) { animation-delay: 6.10s; }
+.has-video.playing svg > *:nth-child(17) { animation-delay: 6.50s; }
+.has-video.playing svg > *:nth-child(18) { animation-delay: 6.90s; }
+@media (prefers-reduced-motion: reduce) { .has-video.playing svg > * { animation: none; } }
