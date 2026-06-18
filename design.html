@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Design · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="design.html" class="active">Design</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="design">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Claude Design</h2>
+          <p class="lede">Claude Design is Anthropic's design canvas: describe what you want in chat and Claude builds a polished, on-brand design on the canvas beside it. Great for fast campaign mockups, slide decks, one-pagers, and prototypes the martech team can ship or hand off.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">What it is</span><h3>Chat on the left, canvas on the right</h3><p>Tell Claude what you need and it generates a working design you can refine live. No blank artboard, no manual pixel-pushing to get a strong first draft.</p></article>
+          <article class="card"><span class="tag coral">On brand</span><h3>Use your design system</h3><p>Import design systems from a GitHub repo, design files, or uploaded assets. Claude builds with your approved components and checks its output against them before showing you.</p></article>
+          <article class="card"><span class="tag gold">Refine</span><h3>Edit inline, apply everywhere</h3><p>Comment on a specific element, edit text directly, or use adjustment knobs for spacing, color, and layout, then ask Claude to apply a change across the whole design.</p></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="tag blue">What you can make</span><h3>Practical martech assets</h3>
+            <ul>
+              <li>Campaign landing page and email mockups</li>
+              <li>Leadership and campaign-update slide decks</li>
+              <li>One-pagers, briefs, and sell sheets</li>
+              <li>Clickable prototypes to test a flow</li>
+              <li>On-brand social and ad concepts</li>
+            </ul>
+          </article>
+          <article class="card"><span class="tag">Share &amp; export</span><h3>Get it out the door</h3>
+            <ul>
+              <li>Share an internal link, or give edit access to collaborate live</li>
+              <li>Export to Canva, PDF, PPTX, or standalone HTML</li>
+              <li>Hand a build-ready bundle to Claude Code to ship the real thing</li>
+            </ul>
+          </article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card">
+            <span class="tag gold">Try it</span>
+            <h3>Open Claude Design</h3>
+            <p>Sign in with your Claude account and start from a prompt. Use approved, non-sensitive content while you are learning the tool.</p>
+            <p style="margin-top:14px"><a class="btn" href="https://claude.ai/design" target="_blank" rel="noopener">Open claude.ai/design &#8599;</a></p>
+          </article>
+          <article class="card prompt">
+            <div><span class="tag coral">Starter prompt</span><h3>Your first design to try</h3></div>
+            <pre data-copy>Design a one-page campaign landing mockup for [offer] aimed at [audience].
+
+Include: a hero with headline and subhead, 3 benefit blocks, a primary CTA, a short FAQ, and a footer.
+
+Keep it clean and on-brand with a [your-brand] accent color. Then suggest 2 headline variations I can A/B test.</pre>
+            <footer><span>Paste this into Claude Design to generate your first canvas.</span><button class="btn small copy">Copy</button></footer>
+          </article>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <article class="card"><span class="tag blue">Guardrail</span><h3>Responsible use</h3><p>Don't paste sensitive patient or confidential data into design prompts. Keep a human review before anything goes external, and route brand or legal-sensitive work for approval.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>
