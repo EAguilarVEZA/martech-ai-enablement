@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify your output · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="design.html">Design</a>
+        <a href="connect.html">Connect</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+        <a href="verify.html" class="active">Verify</a>
+        <a href="plans.html">Plans</a>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="verify">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Verify your output</h2>
+          <p class="lede">The one skill that separates confident Claude users from cautious ones. Claude drafts fast and is often right &mdash; but it can be confidently wrong, so you own the final check. Treat every output as a strong first draft, not a source of truth.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">Why</span><h3>Fast, not infallible</h3><p>AI can invent facts, numbers, or sources that look right (&ldquo;hallucinations&rdquo;). The cost of a wrong number in a leadership deck is high; a 30-second check is cheap.</p></article>
+          <article class="card"><span class="tag coral">What to check</span><h3>The five things</h3><p>Facts and names, numbers and math, citations and sources, the logic of any claim, and anything that will go external or to a stakeholder.</p></article>
+          <article class="card"><span class="tag gold">How</span><h3>Make Claude help you check</h3><p>Ask it to cite sources, separate facts from assumptions, and flag what it is unsure about. Cross-check key numbers yourself. For high stakes, get a second set of eyes.</p></article>
+        </div>
+        <div class="lesson2" style="margin-top:18px">
+          <div class="lesson2-head"><span class="tag blue">Hands-on lesson</span></div>
+          <h3>Run a verification pass</h3>
+          <p class="use-case"><b>Use case:</b> You have a Claude draft about to go to a stakeholder and want to catch anything risky before you send it.</p>
+          <div class="prompt2">
+            <div class="prompt2-head"><span class="tag gold">Prompt</span><button class="btn small lcopy" type="button">Copy</button></div>
+            <pre data-copy>Review the text below for accuracy before I share it.
+
+Do not rewrite it yet. Instead, list:
+- Claims that need a source
+- Numbers or dates to double-check
+- Anything you are not fully confident about
+- Assumptions you made to write it
+
+Text:
+[paste the draft]</pre>
+          </div>
+          <p class="try-it"><b>Try it:</b> Paste a real, non-sensitive draft and use the flag list to decide what to verify before sending.</p>
+          <details class="example2"><summary>See an example result</summary><div class="example2-body"><b>Needs a source:</b> the &ldquo;industry average open rate of 22%&rdquo; &mdash; confirm against your own data.<br><b>Double-check:</b> the Q3 figure (the chart says 18%, the text says 28%).<br><b>Low confidence:</b> the claim that mobile drove the lift &mdash; it is not in the notes you provided.<br><b>Assumption:</b> &ldquo;leadership&rdquo; means the VP staff &mdash; confirm the audience.<br><em>Fix these four and the draft is safe to send.</em></div></details>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="tag">Checklist</span><h3>Before you ship</h3>
+            <ul>
+              <li>Did I verify every number and date?</li>
+              <li>Are claims supported, or did Claude flag them?</li>
+              <li>Are the sources real and checked, not invented?</li>
+              <li>Would I sign my name to this, or email it to a vendor?</li>
+              <li>Did a human review anything high-stakes or external?</li>
+            </ul>
+          </article>
+          <article class="card"><span class="tag coral">Where this fits</span><h3>The habit behind responsible use</h3><p>Verification pairs with the team <a href="guardrails.html">guardrails</a> and the &ldquo;you own verification&rdquo; mental model on the <a href="index.html">home page</a>. AI drafts; people decide.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

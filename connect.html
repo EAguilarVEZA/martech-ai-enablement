@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect your tools · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="design.html">Design</a>
+        <a href="connect.html" class="active">Connect</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+        <a href="verify.html">Verify</a>
+        <a href="plans.html">Plans</a>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="connect">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Connect your tools</h2>
+          <p class="lede">Connectors let Claude work inside the tools you already use &mdash; your files, email, calendar, and chat &mdash; with your permission. This is where Claude stops being a chat box and starts doing real work in your stack.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">What it is</span><h3>Claude, plugged into your stack</h3><p>A connector links Claude to an outside tool using MCP, an open standard. Once connected, Claude can read &mdash; and sometimes act &mdash; in that tool, only within the permissions you grant.</p></article>
+          <article class="card"><span class="tag coral">Why it matters</span><h3>Less copy-paste, more done</h3><p>Pull a brief from Drive, summarize a Slack thread, draft a reply from an email, or check a calendar &mdash; without leaving Claude or shuttling content back and forth.</p></article>
+          <article class="card"><span class="tag gold">Two kinds</span><h3>Directory vs custom</h3><p>Most people use the built-in <b>Connectors Directory</b> (one click and sign in). Technical teams can add a <b>custom connector</b> by pointing Claude at a remote MCP server URL.</p></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="tag blue">What you can connect</span><h3>Common connectors</h3>
+            <ul>
+              <li>Files &amp; docs &mdash; Google Drive, OneDrive / SharePoint</li>
+              <li>Email &amp; calendar &mdash; Gmail, Outlook / Calendar</li>
+              <li>Chat &mdash; Slack, Microsoft Teams</li>
+              <li>Work tracking &mdash; Asana, Jira, Linear</li>
+              <li>Dev &amp; data &mdash; GitHub and more</li>
+            </ul>
+            <p class="board-note" style="margin-top:10px">What's available depends on your plan and admin settings &mdash; check the directory for the current list.</p>
+          </article>
+          <article class="card"><span class="tag">How to add one</span><h3>In a few clicks</h3>
+            <ol>
+              <li>In Claude chat, open the <b>Search and tools</b> menu (the &ldquo;+&rdquo;), then <b>Add connectors</b>.</li>
+              <li>Browse the <b>Connectors Directory</b> and pick a tool.</li>
+              <li><b>Sign in and authorize</b> the permissions &mdash; Claude never sees your password.</li>
+              <li>Toggle the connector on for a conversation and start asking.</li>
+            </ol>
+            <p style="margin-top:12px"><a class="btn" href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities" target="_blank" rel="noopener">Connector setup guide &#8599;</a></p>
+          </article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card prompt"><div><span class="tag coral">Try it</span><h3>A first connected task</h3></div><pre data-copy>Using my connected [Drive/Email], find the latest approved [campaign brief / thread about X] and give me:
+- a 5-bullet summary
+- the decisions already made
+- the open questions
+- who owns the next step</pre><footer><span>Enable the connector first, then ask.</span><button class="btn small copy">Copy</button></footer></article>
+          <article class="card"><span class="tag gold">Guardrail</span><h3>Connect responsibly</h3>
+            <ul>
+              <li>Only connect tools you need, and review the permissions you grant.</li>
+              <li>Only add custom (remote MCP) connectors you trust &mdash; they can read and change data.</li>
+              <li>Keep sensitive patient or confidential data out of prompts; your admin controls org-wide connectors.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>
