@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power features · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-group"><summary>Learn</summary><div class="nav-menu">
+          <a href="onboarding.html">Onboarding</a>
+          <a href="university.html">University</a>
+          <a href="verify.html">Verify</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="rollout.html">Rollout</a>
+        </div></details>
+        <details class="nav-group"><summary class="active">Tools</summary><div class="nav-menu">
+          <a href="claude.html">Claude</a>
+          <a href="copilot.html">Copilot</a>
+          <a href="design.html">Design</a>
+          <a href="connect.html">Connect</a>
+          <a href="power.html" class="active">Power features</a>
+          <a href="models.html">Models</a>
+          <a href="developers.html">Developers</a>
+        </div></details>
+        <details class="nav-group"><summary>Apply</summary><div class="nav-menu">
+          <a href="tracks.html">Tracks</a>
+          <a href="prompts.html">Prompts</a>
+          <a href="challenge.html">Challenge</a>
+          <a href="qa.html">Q&A</a>
+        </div></details>
+        <details class="nav-group"><summary>Reference</summary><div class="nav-menu">
+          <a href="plans.html">Plans</a>
+          <a href="guardrails.html">Guardrails</a>
+        </div></details>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="power">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Power features: Projects, Files &amp; Artifacts</h2>
+          <p class="lede">Once people are comfortable in chat, these are the features that make Claude dramatically more useful for a team &mdash; shared context, real files, and reusable outputs.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">Projects</span><h3>Stop re-explaining yourself</h3><p>A Project keeps persistent context, custom instructions, and a small knowledge base in one place, so every chat starts already knowing your brand, audience, and rules. Set it once; the whole team benefits.</p><p class="board-note" style="margin-top:10px">Try: a &ldquo;Campaign Brief Project&rdquo; with your template, tone, and approval checklist preloaded.</p></article>
+          <article class="card"><span class="tag coral">Files &amp; vision</span><h3>Bring your real material</h3><p>Drop in a PDF, spreadsheet, screenshot, or chart and ask Claude to extract, summarize, compare, or analyze it. This is the fastest &ldquo;aha&rdquo; for non-technical folks &mdash; no copy-paste, just the source.</p><p class="board-note" style="margin-top:10px">Try: &ldquo;Compare these two campaign reports and tell me what changed and why it matters.&rdquo;</p></article>
+          <article class="card"><span class="tag gold">Artifacts</span><h3>Turn answers into assets</h3><p>Ask Claude to package a good result as a reusable artifact &mdash; a checklist, one-pager, table, tracker, or even a small working web page &mdash; that the team can reuse and adapt.</p><p class="board-note" style="margin-top:10px">Try: &ldquo;Turn this into a reusable launch-QA checklist with placeholders.&rdquo;</p></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="tag blue">Skills &amp; memory</span><h3>Reusable know-how that sticks</h3><p>Skills are reusable capabilities you can give Claude for repeatable jobs, and memory lets Claude carry useful team context forward instead of starting cold every time. Together they make Claude feel less like a tool and more like a teammate who already knows how you work.</p></article>
+          <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Analyze a file</h3></div><pre data-copy>Here is the attached [spreadsheet / PDF / screenshot]. Without inventing anything, give me:
+- the 3 most important takeaways
+- 2 numbers worth double-checking
+- 1 chart or table that would communicate this best
+- the next question I should ask</pre><footer><span>Attach a non-sensitive file first.</span><button class="btn small copy">Copy</button></footer></article>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <article class="card"><span class="tag">Guardrail</span><h3>Keep it safe</h3><p>Only put approved, non-sensitive material in Projects, files, and artifacts. Anything that lands in a shared Project is visible to everyone with access &mdash; treat it like a shared drive.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

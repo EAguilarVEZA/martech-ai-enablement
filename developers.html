@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer track · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-group"><summary>Learn</summary><div class="nav-menu">
+          <a href="onboarding.html">Onboarding</a>
+          <a href="university.html">University</a>
+          <a href="verify.html">Verify</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="rollout.html">Rollout</a>
+        </div></details>
+        <details class="nav-group"><summary class="active">Tools</summary><div class="nav-menu">
+          <a href="claude.html">Claude</a>
+          <a href="copilot.html">Copilot</a>
+          <a href="design.html">Design</a>
+          <a href="connect.html">Connect</a>
+          <a href="power.html">Power features</a>
+          <a href="models.html">Models</a>
+          <a href="developers.html" class="active">Developers</a>
+        </div></details>
+        <details class="nav-group"><summary>Apply</summary><div class="nav-menu">
+          <a href="tracks.html">Tracks</a>
+          <a href="prompts.html">Prompts</a>
+          <a href="challenge.html">Challenge</a>
+          <a href="qa.html">Q&A</a>
+        </div></details>
+        <details class="nav-group"><summary>Reference</summary><div class="nav-menu">
+          <a href="plans.html">Plans</a>
+          <a href="guardrails.html">Guardrails</a>
+        </div></details>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="developers">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Developer track: Claude Code &amp; the API</h2>
+          <p class="lede">For the few on the team who will build, not just chat. This is how Claude goes from drafting to actually changing systems &mdash; safely.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">Claude Code</span><h3>Agentic coding in the terminal</h3><p>Delegate technical tasks: tracking and QA on a site, CSV cleanup, a quick script, a lightweight dashboard, or implementation checks. Ask it to explore first, plan, wait for approval, implement, then verify.</p></article>
+          <article class="card"><span class="tag coral">The API / platform</span><h3>Build Claude into your workflows</h3><p>When you want Claude inside your own apps, automations, or data pipelines, the API gives you programmatic access, billed by usage. This is how custom internal tools get built.</p></article>
+          <article class="card"><span class="tag gold">Custom connectors (MCP)</span><h3>Wire up your own tools</h3><p>Technical teams can stand up a remote MCP server and add it as a custom connector, so Claude can read and act in systems that aren't in the built-in directory.</p></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="tag blue">Who this is for</span><h3>The builders</h3><ul><li>Web and tracking owners doing QA and implementation</li><li>Analysts cleaning data or prototyping dashboards</li><li>Ops folks automating intake, handoffs, and reports</li><li>Anyone wiring Claude into an internal tool</li></ul></article>
+          <article class="card"><span class="tag">Safe practice</span><h3>Build responsibly</h3><ul><li>Have Claude plan and show its work before it changes anything.</li><li>Test on safe, non-production data first.</li><li>Keep secrets and credentials out of prompts.</li><li>Review and verify every change before it ships.</li></ul><p style="margin-top:12px"><a class="btn" href="https://docs.claude.com" target="_blank" rel="noopener">Developer docs &#8599;</a></p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

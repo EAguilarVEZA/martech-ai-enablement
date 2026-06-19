@@ -1215,3 +1215,32 @@ const siteNav = document.querySelector(".site-nav");
       });
       refresh();
     })();
+
+
+    /* ===================== Grouped nav dropdowns ===================== */
+    (function () {
+      const groups = [...document.querySelectorAll(".nav-group")];
+      groups.forEach((g) => {
+        g.addEventListener("toggle", () => {
+          if (g.open) groups.forEach((o) => { if (o !== g) o.open = false; });
+        });
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-group")) groups.forEach((g) => { g.open = false; });
+      });
+    })();
+
+    /* ===================== Certificate ===================== */
+    (function () {
+      const make = document.getElementById("cert-make");
+      if (!make) return;
+      make.addEventListener("click", () => {
+        const n = (document.getElementById("cert-name").value || "").trim() || "Team member";
+        document.getElementById("cert-name-out").textContent = n;
+        document.getElementById("cert-date").textContent = new Date().toLocaleDateString();
+        document.getElementById("cert-out").hidden = false;
+      });
+      const pr = document.getElementById("cert-print");
+      if (pr) pr.addEventListener("click", () => window.print());
+    })();
+

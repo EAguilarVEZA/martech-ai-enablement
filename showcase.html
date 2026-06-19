@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-group"><summary class="active">Learn</summary><div class="nav-menu">
+          <a href="onboarding.html">Onboarding</a>
+          <a href="university.html">University</a>
+          <a href="verify.html">Verify</a>
+          <a href="showcase.html" class="active">Showcase</a>
+          <a href="rollout.html">Rollout</a>
+        </div></details>
+        <details class="nav-group"><summary>Tools</summary><div class="nav-menu">
+          <a href="claude.html">Claude</a>
+          <a href="copilot.html">Copilot</a>
+          <a href="design.html">Design</a>
+          <a href="connect.html">Connect</a>
+          <a href="power.html">Power features</a>
+          <a href="models.html">Models</a>
+          <a href="developers.html">Developers</a>
+        </div></details>
+        <details class="nav-group"><summary>Apply</summary><div class="nav-menu">
+          <a href="tracks.html">Tracks</a>
+          <a href="prompts.html">Prompts</a>
+          <a href="challenge.html">Challenge</a>
+          <a href="qa.html">Q&A</a>
+        </div></details>
+        <details class="nav-group"><summary>Reference</summary><div class="nav-menu">
+          <a href="plans.html">Plans</a>
+          <a href="guardrails.html">Guardrails</a>
+        </div></details>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="showcase">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>See it in action: the 5-minute wow</h2>
+          <p class="lede">The fastest way to make Claude click for a room is to watch it go from messy notes to a polished deliverable in one sitting. Run these four steps live in a kickoff &mdash; each builds on the last.</p>
+        </div>
+        <div class="lessons-track">
+          <article class="lesson2">
+            <div class="lesson2-head"><span class="tag">Step 1 &middot; Notes to brief</span></div>
+            <h3>Turn messy notes into a campaign brief</h3>
+            <div class="prompt2"><div class="prompt2-head"><span class="tag gold">Prompt</span><button class="btn small lcopy" type="button">Copy</button></div><pre data-copy>Turn these rough notes into a campaign brief: objective, audience, insight, core message, offer, channels, assets, timeline, owners, risks, approval checklist. Ask me anything important that's missing first.
+
+Notes:
+[paste real, non-sensitive notes]</pre></div>
+          </article>
+          <article class="lesson2">
+            <div class="lesson2-head"><span class="tag coral">Step 2 &middot; Brief to deck</span></div>
+            <h3>Turn the brief into a deck outline</h3>
+            <div class="prompt2"><div class="prompt2-head"><span class="tag gold">Prompt</span><button class="btn small lcopy" type="button">Copy</button></div><pre data-copy>Using the brief you just wrote, create a 10-slide leadership deck outline. Per slide: a takeaway headline, 2-3 bullets, a suggested visual, and a speaker note.</pre></div>
+          </article>
+          <article class="lesson2">
+            <div class="lesson2-head"><span class="tag gold">Step 3 &middot; Deck to mockup</span></div>
+            <h3>Turn a key slide into an on-brand mockup</h3>
+            <p class="use-case">Open <a href="design.html">Claude Design</a> and paste this:</p>
+            <div class="prompt2"><div class="prompt2-head"><span class="tag gold">Prompt</span><button class="btn small lcopy" type="button">Copy</button></div><pre data-copy>Design a one-page landing mockup for the campaign in this brief: hero with headline and subhead, 3 benefit blocks, a primary CTA, and a footer. Keep it clean and on-brand.</pre></div>
+          </article>
+          <article class="lesson2">
+            <div class="lesson2-head"><span class="tag blue">Step 4 &middot; Polish &amp; verify</span></div>
+            <h3>Sharpen it and check it</h3>
+            <div class="prompt2"><div class="prompt2-head"><span class="tag gold">Prompt</span><button class="btn small lcopy" type="button">Copy</button></div><pre data-copy>Improve the brief for a busy executive: clearer, more concise, specific about impact. Then list any claims or numbers I should verify before sharing.</pre></div>
+            <p class="try-it"><b>That's the wow:</b> messy notes to a brief, a deck, a mockup, and a verified version &mdash; in about five minutes. See <a href="verify.html">Verify your output</a> for the checking habit.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

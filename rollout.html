@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rollout plan · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-group"><summary class="active">Learn</summary><div class="nav-menu">
+          <a href="onboarding.html">Onboarding</a>
+          <a href="university.html">University</a>
+          <a href="verify.html">Verify</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="rollout.html" class="active">Rollout</a>
+        </div></details>
+        <details class="nav-group"><summary>Tools</summary><div class="nav-menu">
+          <a href="claude.html">Claude</a>
+          <a href="copilot.html">Copilot</a>
+          <a href="design.html">Design</a>
+          <a href="connect.html">Connect</a>
+          <a href="power.html">Power features</a>
+          <a href="models.html">Models</a>
+          <a href="developers.html">Developers</a>
+        </div></details>
+        <details class="nav-group"><summary>Apply</summary><div class="nav-menu">
+          <a href="tracks.html">Tracks</a>
+          <a href="prompts.html">Prompts</a>
+          <a href="challenge.html">Challenge</a>
+          <a href="qa.html">Q&A</a>
+        </div></details>
+        <details class="nav-group"><summary>Reference</summary><div class="nav-menu">
+          <a href="plans.html">Plans</a>
+          <a href="guardrails.html">Guardrails</a>
+        </div></details>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="rollout">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Rollout plan, certification &amp; adoption</h2>
+          <p class="lede">A guide only works if people actually use it. Here is a simple cadence to run the program, a way to recognize people who finish, and what to measure so you know it is working.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">How people learn</span><h3>70 / 20 / 10</h3><p>Roughly 70% from doing real work, 20% from peers, 10% from formal training. So weight everything toward this week's real tasks, make it easy to share wins, and keep formal lessons short.</p></article>
+          <article class="card"><span class="tag coral">Do-along</span><h3>Never just watch</h3><p>Every session ends with people in Claude using their own input. The hands-on lessons and the coach already do this &mdash; protect that.</p></article>
+          <article class="card"><span class="tag gold">Stay unblocked</span><h3>Office hours + coach</h3><p>A weekly 30-minute office hour plus the always-on University Coach catches people before they give up. A shared Teams/Slack channel for prompts and wins does the rest.</p></article>
+        </div>
+
+        <div style="margin-top:18px;overflow-x:auto">
+          <table class="matrix" aria-label="12-week rollout plan">
+            <thead><tr><th>Week</th><th>Theme</th><th>Do this week</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Kickoff &amp; foundations</td><td>The 3 mental models; write one real prompt.</td></tr>
+              <tr><td>2</td><td>Files &amp; data</td><td>Drop in a real file and have Claude analyze it.</td></tr>
+              <tr><td>3</td><td>Research &amp; verify</td><td>Summarize notes; run a verification pass.</td></tr>
+              <tr><td>4</td><td>Briefs &amp; content</td><td>Turn messy notes into a brief.</td></tr>
+              <tr><td>5</td><td>Decks &amp; Design</td><td>Build a deck outline; try Claude Design.</td></tr>
+              <tr><td>6</td><td>Projects &amp; artifacts</td><td>Set up a Project; save one reusable artifact.</td></tr>
+              <tr><td>7</td><td>Connect your tools</td><td>Connect one tool and run a connected task.</td></tr>
+              <tr><td>8</td><td>Agents &amp; automation</td><td>Use a helper role; schedule a recurring task.</td></tr>
+              <tr><td>9</td><td>Models &amp; thinking</td><td>Notice when to switch model or think longer.</td></tr>
+              <tr><td>10</td><td>Role deep-dive</td><td>Work your track end to end.</td></tr>
+              <tr><td>11</td><td>Challenge build</td><td>Build your challenge entry.</td></tr>
+              <tr><td>12</td><td>Showcase &amp; certify</td><td>Present, recognize, and earn your certificate.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <article class="card">
+            <span class="tag gold">Certification</span>
+            <h3>Earn your certificate</h3>
+            <p>Finish the core path &mdash; the <a href="university.html">University lessons</a>, the <a href="verify.html">verification</a> habit, and a real <a href="challenge.html">Challenge</a> entry &mdash; then generate your certificate.</p>
+            <div class="form-stack">
+              <label for="cert-name">Your name</label>
+              <input id="cert-name" type="text" placeholder="Your name">
+              <button class="btn" id="cert-make" type="button">Generate certificate</button>
+            </div>
+            <div id="cert-out" hidden style="margin-top:14px">
+              <div class="cert-card">
+                <span class="cert-kicker">MarTech AI Enablement</span>
+                <h3 id="cert-name-out">Name</h3>
+                <p>has completed the Claude enablement program &mdash; foundations, core workflows, and a real challenge applied to martech work.</p>
+                <div class="cert-foot"><span id="cert-date"></span><span>OH MarTech AI</span></div>
+              </div>
+              <button class="btn small secondary" id="cert-print" type="button" style="margin-top:10px">Print / Save PDF</button>
+            </div>
+          </article>
+          <article class="card"><span class="tag blue">Measure adoption</span><h3>Know it's working</h3><p>Track the things that show real change, not vanity metrics:</p><ul><li>Which workflows people actually moved to Claude</li><li>Lessons completed and Challenge entries submitted</li><li>Time saved on a few named tasks (ask people)</li><li>Prompts and wins shared in the team channel</li></ul><p class="board-note" style="margin-top:10px">Surface the best stories &mdash; nothing drives adoption like a peer's real win.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

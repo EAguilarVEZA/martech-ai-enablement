@@ -1846,3 +1846,32 @@
 details.lesson summary { font-size: 1.02rem; }
 #foundations .card .tag { font-size: 0.95rem; padding: 4px 12px; }
 #journey .card a, #capabilities .card a, #ladder .card a, #ladder .lesson-body a { color: var(--teal-dark); font-weight: 800; }
+
+/* ---- v4: grouped dropdown nav, certificate ---- */
+.nav-group { position: relative; }
+.nav-group > summary {
+  list-style: none; cursor: pointer; border-radius: var(--radius); padding: 8px 9px;
+  color: var(--ink); font-size: 0.88rem; font-weight: 800; display: inline-flex; align-items: center; gap: 5px;
+}
+.nav-group > summary::-webkit-details-marker { display: none; }
+.nav-group > summary::after { content: "\25BE"; font-size: 0.66rem; color: var(--muted); }
+.nav-group > summary:hover, .nav-group > summary.active { background: #edf5f2; color: var(--teal-dark); }
+.nav-menu {
+  position: absolute; top: calc(100% + 8px); left: 0; min-width: 184px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 6px; display: grid; gap: 2px; z-index: 40;
+}
+.nav-menu a { display: block; padding: 8px 11px; border-radius: 6px; font-size: 0.88rem; color: var(--ink); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.nav-menu a:hover { background: #edf5f2; color: var(--teal-dark); }
+.nav-menu a.active { background: var(--teal); color: #fff; }
+@media (max-width: 980px) {
+  .nav-menu { position: static; box-shadow: none; border: 0; padding: 2px 0 6px 14px; min-width: 0; }
+}
+.cert-card {
+  border: 2px solid var(--teal); border-radius: var(--radius); padding: 22px;
+  background: linear-gradient(135deg, #f4faf8, #ffffff); text-align: center;
+}
+.cert-card .cert-kicker { display: block; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-dark); }
+.cert-card h3 { margin: 8px 0; font-size: 1.6rem; }
+.cert-card p { color: var(--muted); margin: 0 auto; max-width: 420px; }
+.cert-foot { display: flex; justify-content: space-between; margin-top: 18px; color: var(--muted); font-size: 0.8rem; font-weight: 800; }

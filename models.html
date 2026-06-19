@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Models and thinking · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <details class="nav-group"><summary>Learn</summary><div class="nav-menu">
+          <a href="onboarding.html">Onboarding</a>
+          <a href="university.html">University</a>
+          <a href="verify.html">Verify</a>
+          <a href="showcase.html">Showcase</a>
+          <a href="rollout.html">Rollout</a>
+        </div></details>
+        <details class="nav-group"><summary class="active">Tools</summary><div class="nav-menu">
+          <a href="claude.html">Claude</a>
+          <a href="copilot.html">Copilot</a>
+          <a href="design.html">Design</a>
+          <a href="connect.html">Connect</a>
+          <a href="power.html">Power features</a>
+          <a href="models.html" class="active">Models</a>
+          <a href="developers.html">Developers</a>
+        </div></details>
+        <details class="nav-group"><summary>Apply</summary><div class="nav-menu">
+          <a href="tracks.html">Tracks</a>
+          <a href="prompts.html">Prompts</a>
+          <a href="challenge.html">Challenge</a>
+          <a href="qa.html">Q&A</a>
+        </div></details>
+        <details class="nav-group"><summary>Reference</summary><div class="nav-menu">
+          <a href="plans.html">Plans</a>
+          <a href="guardrails.html">Guardrails</a>
+        </div></details>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="models">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Choosing a model &amp; thinking time</h2>
+          <p class="lede">Claude comes in a few sizes, and you can let it think longer on hard problems. You rarely need to fuss over this &mdash; but knowing the trade-off helps you get faster, better results.</p>
+        </div>
+        <div class="grid">
+          <article class="card playbook-card"><span class="tag">Opus</span><h3>Most capable</h3><p>The deepest reasoning. Reach for it on the hardest analysis, complex multi-step work, and high-stakes drafts where quality matters most.</p></article>
+          <article class="card playbook-card"><span class="tag coral">Sonnet</span><h3>The everyday default</h3><p>Balanced and fast, and strong enough for almost all martech work &mdash; briefs, research, content, decks. Start here unless you have a reason not to.</p></article>
+          <article class="card playbook-card"><span class="tag gold">Haiku</span><h3>Fastest &amp; most economical</h3><p>Best for quick, simple, high-volume tasks where speed and cost matter more than depth.</p></article>
+        </div>
+        <div style="margin-top:18px;overflow-x:auto">
+          <table class="matrix" aria-label="Model selection">
+            <thead><tr><th>If your task is&hellip;</th><th>Reach for</th></tr></thead>
+            <tbody>
+              <tr><td>A quick rewrite, summary, or simple answer</td><td><strong>Haiku</strong> (or the default)</td></tr>
+              <tr><td>Most day-to-day work &mdash; briefs, research, content, decks</td><td><strong>Sonnet</strong> (the default)</td></tr>
+              <tr><td>Hard reasoning, complex analysis, or a high-stakes deliverable</td><td><strong>Opus</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid two" style="margin-top:18px">
+          <article class="card"><span class="tag blue">Extended thinking</span><h3>Let it think longer</h3><p>For genuinely hard, multi-step problems you can let Claude reason for longer before it answers &mdash; trading a little speed for noticeably better depth. For simple tasks, skip it; the extra thinking just slows you down.</p></article>
+          <article class="card"><span class="tag gold">Rule of thumb</span><h3>Don't overthink it</h3><p>Use the default model for almost everything. Switch up to the most capable model only when the answer really matters or the problem is genuinely complex, and turn on longer thinking for those same hard cases.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>
