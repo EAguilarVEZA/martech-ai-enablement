@@ -1840,3 +1840,9 @@
 }
 .nav-links a.ownership-link:hover { background: #000000; color: #ff5a4d; }
 .nav-links a.ownership-link.active { background: #ef3b2f; color: #ffffff; border-color: #ef3b2f; }
+
+/* ---- v2: nav wraps gracefully, ladder rungs ---- */
+.nav-links { flex-wrap: wrap; row-gap: 6px; }
+details.lesson summary { font-size: 1.02rem; }
+#foundations .card .tag { font-size: 0.95rem; padding: 4px 12px; }
+#journey .card a, #capabilities .card a, #ladder .card a, #ladder .lesson-body a { color: var(--teal-dark); font-weight: 800; }

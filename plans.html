@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude plans · MarTech AI Enablement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <strong>MarTech AI Enablement</strong>
+        <span>Claude + Copilot guide</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="copilot.html">Copilot</a>
+        <a href="claude.html">Claude</a>
+        <a href="design.html">Design</a>
+        <a href="tracks.html">Tracks</a>
+        <a href="prompts.html">Prompts</a>
+        <a href="university.html">University</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="qa.html">Q&A</a>
+        <a href="guardrails.html">Guardrails</a>
+        <a href="plans.html" class="active">Plans</a>
+        <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="plans">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Claude account types</h2>
+          <p class="lede">Which Claude plan fits which person. Pricing changes, so the live numbers live on Anthropic's pricing page &mdash; this is the plain-language difference between them.</p>
+        </div>
+        <div class="grid">
+          <article class="card playbook-card"><span class="tag">Free</span><h3>Try Claude</h3><p>Explore Claude on web, desktop, and mobile with limited usage. Good for a first look before committing.</p><p class="board-note" style="margin-top:10px">Best for: curious first-timers.</p></article>
+          <article class="card playbook-card"><span class="tag coral">Pro</span><h3>Individual regular use</h3><p>About 5&times; the free usage per session, priority access during busy times, early access to new features, and Claude Code in the terminal &mdash; all in one subscription. Around $20/month.</p><p class="board-note" style="margin-top:10px">Best for: someone using Claude most days.</p></article>
+          <article class="card playbook-card"><span class="tag gold">Max</span><h3>Power users</h3><p>Higher limits than Pro, in two tiers: <b>Max 5&times;</b> and <b>Max 20&times;</b> the Pro usage per session, plus priority access to the newest models and features.</p><p class="board-note" style="margin-top:10px">Best for: heavy daily users who hit Pro limits.</p></article>
+          <article class="card playbook-card"><span class="tag blue">Team</span><h3>Teams &amp; shared admin</h3><p>Up to 150 seats with central billing, single sign-on, domain capture, just-in-time provisioning, and role-based permissions. Standard seats get a bit more usage than Pro.</p><p class="board-note" style="margin-top:10px">Best for: a department that wants one managed workspace.</p></article>
+          <article class="card playbook-card"><span class="tag">Enterprise</span><h3>Large, regulated orgs</h3><p>Everything in Team plus advanced security and compliance controls and more scale. The seat fee covers access; usage is billed separately at API rates.</p><p class="board-note" style="margin-top:10px">Best for: orgs with strict security and compliance needs.</p></article>
+        </div>
+
+        <div style="margin-top:20px;overflow-x:auto">
+          <table class="matrix" aria-label="Claude plan comparison">
+            <thead><tr><th>What matters</th><th>Free</th><th>Pro</th><th>Max</th><th>Team</th><th>Enterprise</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Usage per session</strong></td><td>Limited</td><td>~5&times; Free</td><td>5&times;&ndash;20&times; Pro</td><td>~1.25&times; Pro / seat</td><td>Usage at API rates</td></tr>
+              <tr><td><strong>Apps + Claude Code</strong></td><td>Limited</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>Early access to new features</strong></td><td>&mdash;</td><td>Yes</td><td>Priority</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td><strong>Team admin (SSO, roles, billing)</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Yes</td><td>Yes, advanced</td></tr>
+              <tr><td><strong>Security &amp; compliance</strong></td><td>Standard</td><td>Standard</td><td>Standard</td><td>Added controls</td><td>Advanced</td></tr>
+              <tr><td><strong>Billing</strong></td><td>Free</td><td>Per user</td><td>Per user</td><td>Per seat</td><td>Seat + API usage</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <article class="card"><span class="tag coral">For our team</span><h3>What I'd pick</h3><ul><li><b>Most of the team:</b> a Team workspace &mdash; one place to manage seats, SSO, and billing.</li><li><b>Power users who hit limits:</b> add Max for them.</li><li><b>Strict security or compliance:</b> Enterprise.</li><li><b>Just exploring:</b> Pro for an individual.</li></ul></article>
+          <article class="card"><span class="tag blue">Note</span><h3>Two other things to know</h3><ul><li><b>Developers</b> who build on Claude use the <b>API</b>, billed by usage &mdash; separate from these chat plans.</li><li><b>Pricing and exact limits change.</b> Always confirm current numbers on the official pricing page before deciding.</li></ul><p style="margin-top:12px"><a class="btn" href="https://claude.com/pricing" target="_blank" rel="noopener">See current pricing &#8599;</a></p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="footer">
+    <div class="wrap">
+      <span>Internal guide for martech Claude onboarding. Update examples as your team discovers stronger workflows.</span>
+      <span>References: <a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them">Claude Artifacts</a>, <a href="https://code.claude.com/docs/en/overview">Claude Code</a>, <a href="https://support.microsoft.com/en-us/copilot">Microsoft 365 Copilot help</a>, <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Copilot in Outlook</a>, and <a href="https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a">Copilot in Excel</a>.</span>
+    </div>
+  </footer>
+  <div class="copy-toast" role="status" aria-live="polite">Copied prompt</div>
+  <script src="app.js"></script>
+</body>
+</html>

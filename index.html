@@ -28,6 +28,7 @@
         <a href="challenge.html">Challenge</a>
         <a href="qa.html">Q&A</a>
         <a href="guardrails.html">Guardrails</a>
+        <a href="plans.html">Plans</a>
         <a href="ownership.html" class="ownership-link">Extreme Ownership</a>
       </div>
     </div>
@@ -52,31 +53,114 @@
     <div class="stat"><strong>Team use</strong><span>Share prompts, examples, templates, and lessons learned.</span></div>
   </div>
   <main>
-    <section id="why">
+    <section id="journey">
       <div class="wrap">
         <div class="section-head">
-          <h2>Why the team has Claude access</h2>
-          <p class="lede">The goal is not to add another tool. The goal is to help the martech team move faster from unclear request to useful first draft, better analysis, and more consistent deliverables.</p>
+          <h2>Your path to using Claude well</h2>
+          <p class="lede">This guide takes the team from a first prompt to connected, automated workflows. You learn by doing &mdash; one real task at a time. Here is the path, and where each part lives.</p>
         </div>
         <div class="grid">
-          <article class="card">
-            <span class="tag">Better first drafts</span>
-            <h3>Reduce blank-page time</h3>
-            <p>Claude can turn rough notes, campaign briefs, meeting transcripts, or product information into a structured outline, memo, email, or presentation starting point.</p>
-          </article>
-          <article class="card">
-            <span class="tag coral">Stronger thinking</span>
-            <h3>Pressure-test ideas early</h3>
-            <p>Ask Claude to compare options, identify assumptions, surface risks, and suggest what evidence would make a campaign recommendation stronger.</p>
-          </article>
-          <article class="card">
-            <span class="tag gold">Reusable assets</span>
-            <h3>Create team patterns</h3>
-            <p>Prompts, templates, campaign checklists, QA rubrics, and research summaries can become repeatable building blocks for the whole team.</p>
-          </article>
+          <article class="card"><span class="tag">Stage 1 &middot; Foundations</span><h3>Think like a Claude user</h3><p>The three mental models below, prompting basics, and how to verify output. Start here even if you are in a hurry.</p></article>
+          <article class="card"><span class="tag coral">Stage 2 &middot; Core workflows</span><h3>Do your real work</h3><p>Briefs, research, decks, content, QA &mdash; the hands-on lessons in <a href="university.html">AI University</a> and your <a href="tracks.html">role track</a>.</p></article>
+          <article class="card"><span class="tag gold">Stage 3 &middot; Power features</span><h3>Go beyond chat</h3><p>Files and data, Projects for shared context, reusable artifacts, and <a href="design.html">Claude Design</a> for visuals.</p></article>
+          <article class="card"><span class="tag blue">Stage 4 &middot; Connect &amp; automate</span><h3>Plug into your stack</h3><p>Connect your tools, use helper agents, and set work to run on a schedule. See <a href="claude.html">Claude</a>.</p></article>
+          <article class="card"><span class="tag">Stage 5 &middot; Go deep</span><h3>For the builders</h3><p>Cowork for file work, Claude Code for technical tasks, and the API for custom solutions. See <a href="claude.html">Claude</a>.</p></article>
+          <article class="card"><span class="tag coral">Stage 6 &middot; Make it stick</span><h3>Build the habit</h3><p><a href="ownership.html">Extreme Ownership</a>, the <a href="challenge.html">AI Challenge</a>, and a shared prompt library keep momentum going.</p></article>
         </div>
       </div>
     </section>
+
+    <section id="foundations">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Three mental models that make everything click</h2>
+          <p class="lede">Most people get more out of Claude in a day once these land. Teach these first; every workflow afterward is easier.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="tag">1</span><h3>A prompt is delegation</h3><p>Brief Claude like a sharp new teammate: who it should act as (role), what you want (goal), the inputs (context), the rules (constraints), and what &ldquo;done&rdquo; looks like (format).</p></article>
+          <article class="card"><span class="tag coral">2</span><h3>Context is everything</h3><p>Claude only knows what you give it. Paste the notes, attach the file, name the audience. Vague in, vague out &mdash; specific in, useful out.</p></article>
+          <article class="card"><span class="tag gold">3</span><h3>You own verification</h3><p>Claude drafts; you decide. Treat output as a fast first draft, check facts and numbers, and keep a human review before anything goes external.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What can Claude do for you?</h2>
+          <p class="lede">Pick what you want to get done. Each one has a real martech example and a prompt you can copy and try right now.</p>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab" data-tab="cap-write" aria-selected="true" type="button">Write</button>
+          <button class="tab" data-tab="cap-research" type="button">Research</button>
+          <button class="tab" data-tab="cap-data" type="button">Analyze data</button>
+          <button class="tab" data-tab="cap-design" type="button">Decks &amp; design</button>
+          <button class="tab" data-tab="cap-build" type="button">Build</button>
+          <button class="tab" data-tab="cap-connect" type="button">Connect &amp; automate</button>
+        </div>
+        <div class="panel active" id="cap-write">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Drafts, rewrites, and variants</h3><p>Turn rough notes into a campaign brief, rewrite copy for an audience, or generate three subject-line options with rationale.</p></article>
+            <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Rewrite for an audience</h3></div><pre data-copy>Rewrite this copy for [audience]. Give 3 versions: one punchy, one detailed, one executive. Keep the core facts and tone. Note the top change in each.
+
+Copy:
+[paste]</pre><footer><span>Paste into Claude.</span><button class="btn small copy">Copy</button></footer></article>
+          </div>
+        </div>
+        <div class="panel" id="cap-research">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Synthesize sources into decisions</h3><p>Summarize notes, transcripts, or articles into findings, risks, and next questions &mdash; with the caveats flagged.</p></article>
+            <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Research synthesis</h3></div><pre data-copy>Summarize the notes below for a busy marketing leader. Return: 5 findings, why each matters, weak evidence to verify, next questions, and a 150-word summary.
+
+Notes:
+[paste]</pre><footer><span>Always verify the facts.</span><button class="btn small copy">Copy</button></footer></article>
+          </div>
+        </div>
+        <div class="panel" id="cap-data">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Make sense of files and numbers</h3><p>Drop in a spreadsheet, PDF, or screenshot and ask for trends, outliers, a plain-language explanation, or a clean table.</p></article>
+            <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Explain a dataset</h3></div><pre data-copy>Analyze the attached campaign data. Return: the main trend, 2 outliers, likely reasons, and 3 questions it should prompt. Flag anything you cannot verify. Do not invent numbers.</pre><footer><span>Attach a non-sensitive file first.</span><button class="btn small copy">Copy</button></footer></article>
+          </div>
+        </div>
+        <div class="panel" id="cap-design">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Decks, one-pagers, and mockups</h3><p>Build slide outlines and speaker notes, or open <a href="design.html">Claude Design</a> to generate on-brand landing pages and prototypes on a canvas.</p></article>
+            <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Executive deck outline</h3></div><pre data-copy>Create a 10-slide executive update for [audience]. Per slide: a takeaway headline, 2-3 bullets, a suggested visual, and a speaker note. End with the 3 questions I should be ready to answer.</pre><footer><span>Then refine the headlines.</span><button class="btn small copy">Copy</button></footer></article>
+          </div>
+        </div>
+        <div class="panel" id="cap-build">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Reusable artifacts and tools</h3><p>Turn a good result into a checklist, template, tracker, or a small working web page you can reuse with the team.</p></article>
+            <article class="card prompt"><div><span class="tag coral">Try it</span><h3>Make a reusable artifact</h3></div><pre data-copy>Turn this into a reusable [checklist / one-pager / tracker] template with placeholders and short guidance, so the team can use it next time.
+
+Content:
+[paste]</pre><footer><span>Save the result as a team template.</span><button class="btn small copy">Copy</button></footer></article>
+          </div>
+        </div>
+        <div class="panel" id="cap-connect">
+          <div class="grid two">
+            <article class="card"><span class="tag">Use case</span><h3>Connect tools and automate</h3><p>Connect Claude to email, calendar, drive, and other tools so it works in your stack &mdash; and set recurring tasks to run on a schedule.</p></article>
+            <article class="card"><span class="tag gold">Where to go</span><h3>Next steps</h3><p>See <a href="claude.html">Claude</a> for chat, Cowork, Code, and agents, and ask the <a href="university.html">University Coach</a> which tool fits your task.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ladder">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>From chat to agent: where are you on the ladder?</h2>
+          <p class="lede">People learn faster when they can see the next rung. Find yourself, then aim one step up.</p>
+        </div>
+        <div class="lesson-pack">
+          <details class="lesson" open><summary>Rung 1 &middot; Chat assistant</summary><div class="lesson-body" style="grid-template-columns:1fr"><div><p><b>You can:</b> ask questions, draft and rewrite, brainstorm, summarize. <b>Next step:</b> add role, context, and a format to every prompt (see Foundations).</p></div></div></details>
+          <details class="lesson"><summary>Rung 2 &middot; Document &amp; data partner</summary><div class="lesson-body" style="grid-template-columns:1fr"><div><p><b>You can:</b> drop in files, images, and spreadsheets and have Claude analyze, extract, and explain. <b>Next step:</b> use Projects to keep shared context so you stop re-explaining.</p></div></div></details>
+          <details class="lesson"><summary>Rung 3 &middot; Builder</summary><div class="lesson-body" style="grid-template-columns:1fr"><div><p><b>You can:</b> create reusable artifacts, templates, and on-brand designs with <a href="design.html">Claude Design</a>. <b>Next step:</b> standardize a few team templates and a shared prompt library.</p></div></div></details>
+          <details class="lesson"><summary>Rung 4 &middot; Connected agent</summary><div class="lesson-body" style="grid-template-columns:1fr"><div><p><b>You can:</b> connect tools, use helper agents, run scheduled work, and hand technical tasks to Claude Code. <b>Next step:</b> automate one recurring workflow end to end.</p></div></div></details>
+        </div>
+      </div>
+    </section>
+
   </main>
 <footer class="footer">
     <div class="wrap">
