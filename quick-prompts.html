@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Prompts for Microsoft · MarTech AI Enablement</title>
+<style>
+:root{
+  --ink:#151a2d; --muted:#5b647a; --line:#e7eaf3;
+  --brand:#e2570e; --brand2:#29b3c4;
+  --outlook:#0f6cbd; --teams:#5b5fc7; --word:#185abd; --excel:#107c41; --ppt:#c43e1c; --copilot:#7b61ff;
+  --radius:18px; --shadow:0 10px 30px rgba(20,26,45,.08); --shadow-sm:0 4px 14px rgba(20,26,45,.06);
+  --font:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font);color:var(--ink);background:#f5f7fb;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(12,17,33,.82);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav .brand{display:flex;flex-direction:column;line-height:1.1}
+.nav .brand strong{color:#fff;font-size:15px;font-weight:800;letter-spacing:-.01em}
+.nav .brand span{color:#9fb0d6;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+.nav .links{display:flex;gap:8px;align-items:center}
+.nav .links a{color:#c7d0e6;font-size:14px;font-weight:600;padding:8px 14px;border-radius:9px;transition:background .15s,color .15s}
+.nav .links a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav .links a.active{background:var(--brand);color:#fff}
+@media(max-width:720px){.nav .links a:not(.active){display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;color:#fff;
+  background:radial-gradient(1200px 400px at 15% -10%,rgba(123,97,255,.55),transparent 60%),
+             radial-gradient(900px 500px at 100% 0%,rgba(41,179,196,.45),transparent 55%),
+             linear-gradient(120deg,#0d1224 0%,#1c2748 60%,#22305a 100%);}
+.hero .wrap{padding:52px 28px 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ffd9b8;margin:0 0 14px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+.hero h1{font-size:50px;line-height:1.03;margin:0 0 16px;font-weight:800;letter-spacing:-.02em;max-width:17ch}
+.hero p{font-size:18px;color:#c7cfe6;max-width:62ch;margin:0 0 26px}
+.meta{display:flex;flex-wrap:wrap;gap:10px}
+.pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;color:#eaf0ff}
+
+section{padding:52px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:0 0 26px;flex-wrap:wrap}
+.sec-head h2{font-size:30px;font-weight:800;letter-spacing:-.01em;margin:0;display:flex;align-items:center;gap:12px}
+.sec-head h2 .kbd{font-size:13px;font-weight:700;color:var(--brand);background:#fdece1;padding:4px 10px;border-radius:8px;letter-spacing:.04em}
+.sec-head p{color:var(--muted);margin:0;max-width:52ch;font-size:15px}
+
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.beat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);position:relative}
+.beat .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),#f2894e);color:#fff;margin-bottom:14px}
+.beat .ico svg{width:20px;height:20px}
+.beat h3{margin:0 0 6px;font-size:17px}.beat p{margin:0;color:var(--muted);font-size:14px}
+.beat .when{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9aa3b8}
+
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.app{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.app:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(20,26,45,.12)}
+.app-top{display:flex;align-items:center;gap:14px;padding:20px 22px;border-bottom:1px solid var(--line)}
+.badge{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;flex:none;box-shadow:var(--shadow-sm)}
+.badge svg{width:24px;height:24px}
+.app-top .name{font-size:19px;font-weight:800;margin:0;line-height:1.1}
+.app-top .name span{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-top:2px}
+.app-body{padding:18px 22px 22px;display:flex;flex-direction:column;gap:16px;flex:1}
+.moves{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.moves li{display:flex;gap:10px;font-size:14.5px;color:#33405b}
+.moves li svg{width:17px;height:17px;flex:none;margin-top:2px}
+.try{background:#0f1426;border-radius:14px;padding:14px 16px;position:relative;margin-top:auto}
+.try .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8ea0c6;display:block;margin-bottom:8px}
+.try code{display:block;color:#e8edf9;font-size:13px;font-family:'SFMono-Regular',Consolas,'Roboto Mono',monospace;line-height:1.55;white-space:pre-wrap}
+.copy{position:absolute;top:12px;right:12px;border:none;background:rgba(255,255,255,.1);color:#dfe6f6;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer;transition:background .15s}
+.copy:hover{background:var(--brand);color:#fff}
+.copy.done{background:#22a06b;color:#fff}
+
+.power{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pw{border-radius:var(--radius);padding:22px;color:#fff;position:relative;overflow:hidden;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.pw .ico{position:absolute;top:18px;left:20px;opacity:.9}.pw .ico svg{width:26px;height:26px}
+.pw h3{margin:0 0 6px;font-size:18px}.pw p{margin:0;font-size:13.5px;opacity:.92}
+.pw.a{background:linear-gradient(140deg,#0f6cbd,#22a5e0)}.pw.b{background:linear-gradient(140deg,#7719aa,#a24bd6)}
+.pw.c{background:linear-gradient(140deg,#107c41,#2bb56a)}.pw.d{background:linear-gradient(140deg,#e2570e,#f2894e)}
+
+.recipe{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+.step{padding:22px;border-right:1px solid var(--line)}.step:last-child{border-right:none}
+.step .n{width:30px;height:30px;border-radius:9px;background:var(--brand2);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:12px;font-size:15px}
+.step h3{margin:0 0 5px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:13.5px}
+
+.tbl{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+.tbl table{width:100%;border-collapse:collapse}
+.tbl th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8590a8;padding:14px 20px;background:#fafbff;border-bottom:1px solid var(--line)}
+.tbl td{padding:14px 20px;border-bottom:1px solid var(--line);font-size:14.5px;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td:first-child{font-weight:700;white-space:nowrap}
+.tbl td code{background:#0f1426;color:#e8edf9;padding:2px 8px;border-radius:6px;font-size:12.5px;font-family:Consolas,monospace}
+
+.backlink{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:700;color:var(--outlook)}
+footer{background:#0f1426;color:#aeb8d0;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#8fd4de}
+
+@media(max-width:900px){
+  .rhythm,.power,.recipe{grid-template-columns:repeat(2,1fr)}
+  .apps{grid-template-columns:1fr}.hero h1{font-size:36px}
+  .step{border-right:none;border-bottom:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><strong>MarTech AI Enablement</strong><span>Claude + Copilot guide</span></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="claude.html">Claude</a>
+      <a href="copilot.html">Copilot</a>
+      <a href="quick-prompts.html" class="active">Quick Prompts</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow"><span class="dot"></span> Copilot · Quick prompts for Microsoft 365</p>
+    <h1>Quick Prompts for Microsoft</h1>
+    <p>Ready-to-paste prompts and the moves that matter — by app, across Microsoft 365. This is the hands-on companion to the Copilot overview: skim your app, copy a prompt, save an hour.</p>
+    <div class="meta">
+      <span class="pill">📧 Outlook</span>
+      <span class="pill">💬 Teams</span>
+      <span class="pill">📝 Word</span>
+      <span class="pill">📊 Excel</span>
+      <span class="pill">📈 PowerPoint</span>
+      <span class="pill">✨ Copilot Chat</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="sec-head">
+      <h2>The daily rhythm</h2>
+      <p>Four moments where Copilot pays for itself. Build the habit and the hours come back.</p>
+    </div>
+    <div class="rhythm">
+      <div class="beat">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <span class="when">Morning</span><h3>Catch up</h3>
+        <p>Ask what changed overnight — mail, chats, meetings — and what needs you first.</p>
+      </div>
+      <div class="beat">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+        <span class="when">Any draft</span><h3>Start from 70%</h3>
+        <p>Never face a blank page. Draft it, then spend your time editing — not creating.</p>
+      </div>
+      <div class="beat">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg></div>
+        <span class="when">Any dataset</span><h3>Ask, don't scroll</h3>
+        <p>Point at the table and ask for the trend, the outlier, and the formula — in plain English.</p>
+      </div>
+      <div class="beat">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg></div>
+        <span class="when">Any meeting</span><h3>Leave with a recap</h3>
+        <p>Decisions, action items, and owners — captured automatically, not just in your memory.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Prompts you can paste, by app</h2>
+      <p>Each card: the moves that matter, plus one copy-ready prompt. Swap the bracketed parts for your work.</p>
+    </div>
+    <div class="apps">
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#0f6cbd,#3a91d8)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+          <p class="name">Outlook<span>Email &amp; calendar</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#0f6cbd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Summarize a long thread into decisions, questions, and action items.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#0f6cbd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Draft or rewrite a reply — set the tone and length.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#0f6cbd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Coach my writing; find a time and draft the invite.</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Catch me up on my inbox from the last 2 days. Group by topic, flag what needs a reply today, note decisions I was asked to make, and draft short replies for the top 3.</code></div>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#5b5fc7,#8b8ee0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <p class="name">Teams<span>Meetings &amp; chat</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#5b5fc7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Intelligent recap: decisions and action items with owners.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#5b5fc7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>"What did I miss?" for a call or a busy channel.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#5b5fc7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Draft the follow-up message and next-steps list.</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Recap this meeting: key decisions in 3-5 bullets, action items grouped by owner with due dates, anything assigned to me, and a short follow-up I can post to the channel.</code></div>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#185abd,#4a86dd)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg></div>
+          <p class="name">Word<span>Documents</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#185abd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Draft from a prompt, outline, or a few bullets.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#185abd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rewrite for clarity, tone, length, or audience.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#185abd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Summarize long docs; reference files with "/".</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Turn these notes into a one-page campaign brief with objective, audience, key message, channels, timeline, owners, and approvals. Keep it executive-friendly. [paste notes]</code></div>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#107c41,#2bb56a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+          <p class="name">Excel<span>Data &amp; analysis</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#107c41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Write and explain formulas in plain English.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#107c41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Surface trends, outliers, and summaries.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#107c41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Suggest charts, PivotTables, conditional formatting.</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Analyze this campaign performance table: summarize the main trend, flag outliers, suggest one chart and PivotTable, and give me the month-over-month growth formula with an explanation.</code></div>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#c43e1c,#e57a4a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg></div>
+          <p class="name">PowerPoint<span>Presentations</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c43e1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Create a deck from a Word doc or a prompt.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c43e1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Generate speaker notes and slide summaries.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c43e1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>"Review this presentation" for structure fixes.</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Create a 7-slide leadership update from this brief. Per slide: one takeaway headline, 2-3 bullets, a suggested visual, and speaker notes. End with the questions I should be ready to answer.</code></div>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="app-top">
+          <div class="badge" style="background:linear-gradient(135deg,#7b61ff,#29b3c4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 15l.8 2L22 17.8 20 18.6 19 21l-1-2.4L16 17.8 18 17z"/></svg></div>
+          <p class="name">Copilot Chat<span>Across your work</span></p>
+        </div>
+        <div class="app-body">
+          <ul class="moves">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#7b61ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reason over mail, files, meetings, chats, and people.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#7b61ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Summarize or compare files without opening them.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#7b61ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Build no-code agents for repeatable tasks.</li>
+          </ul>
+          <div class="try"><span class="lbl">Copy this prompt</span><button class="copy">Copy</button>
+            <code>Using my recent emails, files, meetings, and chats about [project], give me current status in 3 bullets, top risks, what needs my decision this week, and link the sources you used.</code></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Power moves</h2>
+      <p>Four habits that turn a good answer into a great one.</p>
+    </div>
+    <div class="power">
+      <div class="pw a"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><h3>Reference with "/"</h3><p>Pull a file, person, or meeting into the prompt so answers are grounded, not guessed.</p></div>
+      <div class="pw b"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.4 1a7 7 0 0 0-1.7-1L16.5 2h-4l-.3 2.6a7 7 0 0 0-1.7 1l-2.4-1-2 3.4L4.1 11a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 1.7 1l.3 2.6h4l.3-2.6a7 7 0 0 0 1.7-1l2.4 1 2-3.4-2-1.6a7 7 0 0 0 .1-1z"/></svg></span><h3>Agent mode</h3><p>Let Copilot plan and execute multi-step work in Word, Excel, and PowerPoint.</p></div>
+      <div class="pw c"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v14H8l-4 4z"/></svg></span><h3>Pages</h3><p>Turn a strong answer into a durable page you can co-edit with the team.</p></div>
+      <div class="pw d"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></span><h3>Build an agent</h3><p>Package a recurring task — a weekly recap — as a reusable no-code agent.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Make any prompt better <span class="kbd">G · C · S · F</span></h2>
+      <p>The four-part habit that lifts every Copilot answer. Miss one and the output drifts.</p>
+    </div>
+    <div class="recipe">
+      <div class="step"><div class="n">1</div><h3>Goal</h3><p>Say the outcome — a reply, a readout, a 7-slide deck.</p></div>
+      <div class="step"><div class="n">2</div><h3>Context</h3><p>Name the audience and tone: "for leadership," "brief and warm."</p></div>
+      <div class="step"><div class="n">3</div><h3>Source</h3><p>Attach the file, select the table, or reference with "/".</p></div>
+      <div class="step"><div class="n">4</div><h3>Format</h3><p>Ask for headings, a table, bullets, or a word count — then refine.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Find it by what you want to do</h2>
+      <p>Start from the task, not the tool.</p>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>I want to…</th><th>Reach for</th><th>Prompt starter</th></tr></thead>
+        <tbody>
+          <tr><td>Catch up after time away</td><td>Copilot Chat</td><td><code>Catch me up on [project] since [date] and flag what needs me.</code></td></tr>
+          <tr><td>Get a meeting's action items</td><td>Teams</td><td><code>List action items from this meeting by owner with due dates.</code></td></tr>
+          <tr><td>Turn notes into a brief</td><td>Word</td><td><code>Turn these notes into a one-page campaign brief with owners.</code></td></tr>
+          <tr><td>Understand a data table</td><td>Excel</td><td><code>Summarize the top 3 trends and outliers, and suggest a chart.</code></td></tr>
+          <tr><td>Build a leadership deck</td><td>PowerPoint</td><td><code>Make a 7-slide update from this brief with notes and visuals.</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="backlink" href="copilot.html">← Back to the Copilot overview</a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Internal cheat sheet · MarTech AI Enablement. Copilot respects your existing Microsoft 365 permissions — it only sees what you can already see. Follow the team guardrails.</span>
+    <span><a href="copilot.html">Copilot overview</a> · <a href="https://support.microsoft.com/copilot" target="_blank" rel="noopener">Microsoft 365 Copilot help ↗</a></span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const code=btn.parentElement.querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(()=>{
+      const t=btn.textContent;btn.textContent='Copied ✓';btn.classList.add('done');
+      setTimeout(()=>{btn.textContent=t;btn.classList.remove('done')},1400);
+    });
+  });
+});
+</script>
+</body>
+</html>
